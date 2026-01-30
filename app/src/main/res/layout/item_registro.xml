@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="#F8FAFC"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtOrden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#12345"
+                android:textStyle="bold"
+                android:textColor="#3B82F6"
+                android:background="@drawable/bg_login_gradient"
+                android:backgroundTint="#DBEAFE"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"/>
+
+            <TextView
+                android:id="@+id/txtAuto"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="MODELO AUTO"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:id="@+id/iconEstado"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/checkbox_off_background"
+                app:tint="#CBD5E1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/txtDetalleAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color Plata • Placa ABC-123"
+                android:textSize="12sp"
+                android:textColor="#64748B"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDesgloseDinero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Fascia: $500\n• Puerta: $1200"
+                android:textSize="13sp"
+                android:textColor="#334155"
+                android:lineSpacingExtra="4dp"
+                android:background="#F1F5F9"
+                android:padding="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL: "
+                    android:textSize="12sp"
+                    android:textColor="#64748B"/>
+                <TextView
+                    android:id="@+id/txtTotalTarjeta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$1,700.00"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#16A34A"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

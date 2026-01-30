@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_login">
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.destajo.pintura.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/nav_dashboard"
+            app:popUpTo="@id/nav_login"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@id/nav_dashboard"
+            app:popUpTo="@id/nav_login"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.destajo.pintura.DashboardFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_lista"
+        android:name="com.destajo.pintura.ListaFragment"
+        android:label="Historial"
+        tools:layout="@layout/fragment_lista" />
+
+    <fragment
+        android:id="@+id/nav_agregar"
+        android:name="com.destajo.pintura.AgregarFragment"
+        android:label="Nuevo"
+        tools:layout="@layout/fragment_agregar" />
+
+</navigation>

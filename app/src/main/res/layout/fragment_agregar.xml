@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NUEVO TRABAJO"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#0F172A"
+            android:layout_marginBottom="25dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="25dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="20dp" app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp" app:boxCornerRadiusBottomEnd="20dp"
+                        android:hint="AUTO">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/editAuto" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapCharacters"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="20dp" app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp" app:boxCornerRadiusBottomEnd="20dp"
+                        android:hint="COLOR">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/editColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapCharacters"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="15dp">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="20dp" app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp" app:boxCornerRadiusBottomEnd="20dp"
+                        android:hint="ORDEN">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/editOrden" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="20dp" app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusBottomStart="20dp" app:boxCornerRadiusBottomEnd="20dp"
+                        android:hint="PLACA">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/editPlaca" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapCharacters"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:boxCornerRadiusTopStart="20dp" app:boxCornerRadiusTopEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp" app:boxCornerRadiusBottomEnd="20dp"
+                    android:hint="Observaciones">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/editObs" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine" android:lines="2"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONCEPTOS DE COBRO"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#64748B"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/contenedorConceptos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAgregarConcepto"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="+ Agregar Concepto"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="#64748B"
+            app:strokeColor="#CBD5E1"
+            app:cornerRadius="28dp"
+            android:layout_marginTop="10dp"/>
+
+        <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="💾 GUARDAR TRABAJO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#EF4444"
+            app:cornerRadius="30dp"
+            app:elevation="8dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

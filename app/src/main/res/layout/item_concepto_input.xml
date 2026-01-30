@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:baselineAligned="false"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:background="@drawable/bg_chip_blue"
+        android:layout_marginEnd="4dp">
+
+        <Spinner
+            android:id="@+id/spinnerConcepto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/inputMonto"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="3"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        android:background="@drawable/bg_chip_blue"
+        android:paddingHorizontal="8dp"
+        android:layout_marginEnd="4dp"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/inputPorcentaje"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:hint="%"
+        android:inputType="number"
+        android:maxLength="3"
+        android:background="@drawable/bg_chip_blue"
+        android:paddingHorizontal="8dp"
+        android:textSize="14sp"
+        android:textAlignment="center"/>
+
+    <ImageButton
+        android:id="@+id/btnEliminar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="#EF4444"/>
+
+</LinearLayout>

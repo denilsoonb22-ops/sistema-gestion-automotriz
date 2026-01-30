@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="#E2E8F0"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Herramientas y Filtros"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0F172A"
+        android:layout_marginBottom="20dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar (Placa, Auto, Orden)"
+        app:startIconDrawable="@android:drawable/ic_menu_search"
+        android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnBuscarTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔍 BUSCAR AHORA"
+        android:backgroundTint="#0F172A"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FILTRAR POR RANGO DE FECHAS"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#64748B"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnFechaDesde"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="📅 Desde"
+            android:textSize="12sp"/>
+
+        <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnFechaHasta"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="📅 Hasta"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAplicarRango"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="APLICAR FILTRO"
+        android:backgroundTint="#334155"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnResetSemana"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver a Semana Actual"
+        android:textColor="#EF4444"
+        android:layout_marginBottom="20dp"/>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENERAR REPORTES"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#64748B"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/btnPdfSimple"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:padding="10dp">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_sort_by_size" android:tint="#3B82F6"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PDF Ordenes" android:textSize="12sp" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnPdfTotal"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:padding="10dp">
+            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_sort_by_size" android:tint="#EF4444"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PDF Finanzas" android:textSize="12sp" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCSV"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@android:drawable/ic_menu_save"
+                app:tint="#16A34A"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Excel / CSV"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#16A34A"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

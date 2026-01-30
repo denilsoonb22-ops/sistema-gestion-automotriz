@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313174097212",
+    "project_id": "destajo-hojalateria",
+    "storage_bucket": "destajo-hojalateria.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313174097212:android:57dd72b52ae9762e6db239",
+        "android_client_info": {
+          "package_name": "com.destajo.pintura"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOugIG8lJPB6nuYEDrvsoSMmFcyEjmdJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
